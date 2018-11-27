@@ -3,9 +3,9 @@
 Essa página apresenta um passo a passo do procedimento necessário para realizar seu primeiro projeto Nanofox IoT: o botão de pânico. 
 
 ## Recomendações:
-- Arduino IDE instalada no computador. Disponível em: https://www.arduino.cc/en/Guide/HomePage
-- Conta cadastrada na plataforma Tago. Acesse: https://tago.io/
-- Ativação do kit Nanofox IoT. Tutorial disponível em: https://github.com/Gridya/NANOFOX-Activate/blob/master/README.md
+- [Arduino IDE instalada no computador.](https://www.arduino.cc/en/Guide/HomePage)
+- [Conta cadastrada na plataforma Tago.](https://tago.io/)
+- [Ativação do kit Nanofox IoT.](https://github.com/Gridya/NANOFOX-Activate/blob/master/README.md)
 
 ## Aplicação do Projeto:
   O projeto trata-se de um botão de pânico que quando pressionado irá disparar um comando que enviará um e-mail a contatos cadastrados. A escolha da aplicação se deu pensando principalmente para uso em locais fixos como creches ou pontos de ônibus por exemplo, que poderiam ser socorridos rapidamente em casos de emergência através do sinal Sigfox. Tratando-se assim, de um dispositivo de segurança a mais para pessoas nessa situação.
@@ -33,7 +33,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   Temos agora a parte principal do código. Nosso loop trabalha da seguinte forma: o botão é constantemente lido, se caso o valor lido no botão saía de 1 e vá para 0, ou seja, o botão for apertado. Nosso código entra no while e confere a leitura do botão 2 segundos depois através do delay. Se o botão continua apertado, então é enviado um sinal para a rede Sigfox através de funções da biblioteca Nanofox. Caso o botão não continue apertado após esses dois segundos, o código trata tal fato como se fosse um aperto acidental e não toma nenhuma atitude além de enviar uma mensagem no monitor serial. 
   
 ## Terceiro passo: Integração da plataforma Tago com o Backend Sigfox
-  Essa etapa é muito bem relatada e explicada a partir de um [tutorial escrito pela própria Tago] (https://tago.elevio.help/en/articles/33). Nesse tutorial está relatado tanto a parte feita na plataforma Tago quanto a criação de Callbacks no Backend Sigfox para essa integração, tudo muito bem detalhado, vale a pena conferir.
+  Essa etapa é muito bem relatada e explicada a partir de um [tutorial escrito pela própria Tago](https://tago.elevio.help/en/articles/33). Nesse tutorial está relatado tanto a parte feita na plataforma Tago quanto a criação de Callbacks no Backend Sigfox para essa integração, tudo muito bem detalhado, vale a pena conferir.
   Após a conclusão de toda integração, podemos seguir para a última etapa.
   
 ## Quarto passo: Configuração para envio de e-mail via plataforma Tago
