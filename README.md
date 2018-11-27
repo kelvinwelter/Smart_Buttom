@@ -31,7 +31,15 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 Além da nossa configuração necessária para o projeto, devemos adicionar mais algumas coisas como a configuração do Arduino Nano IO e a inicialização do Modem Sigfox WISOL. Além disso, no código fornecido configuramos algumas mensagens para serem mostradas no monitor serial, essa parte é totalmente opcional e o código funciona sem ela.
   #### Função Loop: 
   Temos agora a parte principal do código. Nosso loop trabalha da seguinte forma: o botão é constantemente lido, se caso o valor lido no botão saía de 1 e vá para 0, ou seja, o botão for apertado. Nosso código entra no while e confere a leitura do botão 2 segundos depois através do delay. Se o botão continua apertado, então é enviado um sinal para a rede Sigfox através de funções da biblioteca Nanofox. Caso o botão não continue apertado após esses dois segundos, o código trata tal fato como se fosse um aperto acidental e não toma nenhuma atitude além de enviar uma mensagem no monitor serial. 
-
-
+  
+## Terceiro passo: Integração da plataforma Tago com o Backend Sigfox
+  Essa etapa é muito bem relatada e explicada a partir de um tutorial escrito pela própria Tago e que está disponível em: https://tago.elevio.help/en/articles/33
+  Após a conclusão de toda integração, podemos seguir para a última etapa.
+  
+## Quarto passo: Configuração para envio de e-mail via plataforma Tago
+  Após concluída a integração da plataforma Tago com o backend Sigfox e antes de começarmos o código no Arduino IDE, temos mais um passo necessário na plataforma Tago: configurarmos a plataforma para enviar um e-mail de emergência.
+  .
+  .
+  .
   
 
