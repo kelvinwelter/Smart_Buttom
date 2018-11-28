@@ -1,6 +1,6 @@
-# Tutorial para Botão de Pânico usando Nanofox IoT
+# Tutorial para Smart Buttom usando Nanofox IoT
 
-Essa página apresenta um passo a passo do procedimento necessário para realizar seu primeiro projeto Nanofox IoT: o botão de pânico. 
+Essa página apresenta um passo a passo do procedimento necessário para realizar seu primeiro projeto Nanofox IoT: um Smart Buttom usando Nanofox IoT! 
 
 ## Recomendações:
 - [Arduino IDE instalada no computador.](https://www.arduino.cc/en/Guide/HomePage)
@@ -8,17 +8,17 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 - [Ativação do kit Nanofox IoT.](https://github.com/Gridya/NANOFOX-Activate/blob/master/README.md)
 
 ## Aplicação do Projeto:
-  O projeto trata-se de um botão de pânico que quando pressionado irá disparar um comando que enviará um e-mail a contatos cadastrados. A escolha da aplicação se deu pensando principalmente para uso em locais fixos como creches ou pontos de ônibus por exemplo, que poderiam ser socorridos rapidamente em casos de emergência através do sinal Sigfox. Tratando-se assim, de um dispositivo de segurança a mais para pessoas nessa situação.
+  O projeto trata-se de um tutorial para criar sua primeira aplicação usando Nanofox IoT: um Smart Buttom! Um Smart Buttom usando Nanofox IoT é algo que pode ser aplicado nas mais diversas situações. No nosso tutorial usaremos como exemplo um Smart Buttom que quando acionado, dispara um email através da plataforma Tago. Sinta-se livre para buscar outras aplicações após aprender como fazer um Smart Buttom através desse tutorial!
 
 ## Resumo das etapas:
   O nosso projeto será dividido em 4 etapas principais, além de etapas que não fazem parte do projeto em si mas que são necessárias para a execução de tal.
   
 ## Primeiro passo: Implementação do hardware
-  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2.
+  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. Nosso botão estará ligado do pino D2 até o pino GND para que possamos monitorar o estado do pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
   
-  .
-  .
-  .
+  [![1543442720432.png](https://i.postimg.cc/mDjwbqTb/1543442720432.png)](https://postimg.cc/njs723s5)
+  
+  A montagem é simples e pode ser feita rapidamente. Feita a montagem, pode-se ir para a próxima etapa: a programação.
   
 ## Segundo passo: Programação do firmware para o projeto
   Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código do projeto está fornecido no seguinte link: Enquanto que aqui iremos realizar somente breves explicações sobre o código para esclarecer algumas dúvidas que possam surgir durante a implementação do código. 
