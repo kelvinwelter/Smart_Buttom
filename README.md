@@ -38,6 +38,13 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
 ## Quarto passo: Configuração para envio de e-mail via plataforma Tago
   Após concluída a integração da plataforma Tago com o backend Sigfox e antes de começarmos o código no Arduino IDE, temos mais um passo necessário na plataforma Tago: configurarmos a plataforma para enviar um e-mail de emergência. Para começarmos, acessaremos a opção **Action** no menu lateral da página de desenvolvedor na Tago. Após entrarmos em **Action**, clicamos no botão **Add Action** no canto superior direito. Assim, entramos em uma nova ação a ser criada. Na aba **General Information** damos um nome a nossa ação, escolhemos a ação a ser tomada (**Send Email**) e preenchemos com o destinatário, título e conteúdo do email. A configuração nessa aba deve ficar assim:
+  
   [![general-information.png](https://i.postimg.cc/bN483zZb/general-information.png)](https://postimg.cc/Vd93NPBL)
+  
+  A seguir, precisamos ir para a aba **Trigger**, nessa aba iremos configurar quando a plataforma Tago deve enviar o e-mail. Queremos que ela envie sempre que um sinal Sigfox chegue na plataforma, portanto, devemos configurar a condição de acionamento da ação como **Any** e também devemos escolher uma variável que será monitorado para a condição de acionamento, no caso, escolheremos a variável **data**. Além disso, devemos **desativar a opção Lock trigger after action is taken**. Feito isso, a configuração deve ficar da seguinte maneira:
+  
+  [![trigger.png](https://i.postimg.cc/XY01jJXn/trigger.png)](https://postimg.cc/CzmsJwj2)
+  
+  Após isso, nossa ação já está pronta para ser salva e usada!
   
 
