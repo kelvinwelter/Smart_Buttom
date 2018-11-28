@@ -23,7 +23,7 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 ## Segundo passo: Programação do firmware para o projeto
   Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código do projeto está fornecido no seguinte link: Enquanto que aqui iremos realizar somente breves explicações sobre o código para esclarecer algumas dúvidas que possam surgir durante a implementação do código. 
   #### Bibliotecas necessárias:
-  Para nosso simples projeto, precisamos incluir apenas a biblioteca `Nanofox.h`, que será necessária para a transmissão de dados para a rede Sigfox.
+  Para nosso simples projeto, precisamos incluir apenas a biblioteca [Nanofox.h](https://github.com/Gridya/nanofox), que será necessária para a transmissão de dados para a rede Sigfox.
   #### Variáveis Globais:
   Nossas variáveis globais são necessárias para o correto funcionamento de funções da biblioteca Nanofox como a transmissão e recebimento de dados por exemplo.
   #### Função Setup:
