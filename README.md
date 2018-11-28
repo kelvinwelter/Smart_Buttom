@@ -14,18 +14,79 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
   O nosso projeto será dividido em 4 etapas principais, além de etapas que não fazem parte do projeto em si mas que são necessárias para a execução de tal.
   
 ## Primeiro passo: Implementação do hardware
-  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. Nosso botão estará ligado do pino D2 até o pino GND para que possamos monitorar o estado do pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
+  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
   
   [![1543442720432.png](https://i.postimg.cc/mDjwbqTb/1543442720432.png)](https://postimg.cc/njs723s5)
   
   A montagem é simples e pode ser feita rapidamente. Feita a montagem, pode-se ir para a próxima etapa: a programação.
   
 ## Segundo passo: Programação do firmware para o projeto
-  Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código do projeto está fornecido no seguinte link: Enquanto que aqui iremos realizar somente breves explicações sobre o código para esclarecer algumas dúvidas que possam surgir durante a implementação do código. 
+  Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código fonte está disponibilizado para download aqui e também está disponível a seguir.
+  ```
+  /**
+  **************************************************************************************************
+  * @file    NANOFOX_Activate_v0.ino
+  * @author  Edson Jeske e Kelvin Welter / Gridya Tecnologia
+  * @brief   Smart Buttom usando Nanofox IoT.
+  * 
+  *     - Envia um sinal através da rede Sigfox quando pressionado um botão por 2 segundos
+	*						
+  * License: Public Domain
+  **************************************************************************************************
+  */
+
+
+/*-----HEADER FILES--------------------------------------------------------------------------------*/
+#include <Nanofox.h>   //Nanofox Library
+
+/*------Global Variables---------------------------------------------------------------------------*/
+uint16_t Counter_Sig = 0;        //Counter for testing 
+unsigned long timeref_ms;        //Reference time for delay calculations
+
+uint8_t Uplink_Buffer[12];		//Buffer for uplink Payload
+uint8_t Downlink_Buffer[8];		//Buffer for Downlink Payload
+
+
+/*------Objects -----------------------------------------------------------------------------------*/
+Nanofox MyNanofox;		//Nanofox Object Instance
+
+void setup() {
+
+  Serial.begin(9600);   //Initi Debug serial port
+  
+  MyNanofox.Init_ArduinoNano_IO(); 	//Setup arduino Nano IO
+  MyNanofox.Init_Modem_WISOL(RC2);  //Initialize WISOL Sigfox Modem
+  Serial.println("Welcome to NANOFOX IoT Kit!");
+  Serial.println("Welcome to NANOFOX IoT Kit!");
+  Serial.println("Smartbuttom com Nanofox IoT");
+  Serial.println("Pressione o botão por 2 segundos para ativar");
+  
+  timeref_ms = millis();	// Init time reference 
+}
+
+void loop() {
+  
+	delay(10);
+	
+	if((millis() - timeref_ms) > 20000) //Prints PAC and Device ID every 20s
+	{ 
+		timeref_ms = millis(); //restart time reference
+    
+		MyNanofox.Print_PAC_WISOL();
+		MyNanofox.Print_DEVICE_ID_WISOL();
+	}
+  
+	if(digitalRead(Buttom) == 0) //Send Sigfox msg when button pressed
+	{
+		Serial.println("Button pressed!");
+		
+		MyNanofox.Send_Payload_Sigfox(&Uplink_Buffer[0],2,&Downlink_Buffer[0],0);
+	} 
+}
+  ```
+  Seguem algumas breves explicações sobre o código.
   #### Bibliotecas necessárias:
   Para nosso simples projeto, precisamos incluir apenas a biblioteca [Nanofox.h](https://github.com/Gridya/nanofox), que será necessária para a transmissão de dados para a rede Sigfox.
-  #### Variáveis Globais:
-  Nossas variáveis globais são necessárias para o correto funcionamento de funções da biblioteca Nanofox como a transmissão e recebimento de dados por exemplo.
   #### Função Setup:
   Finalmente em nossa função setup, iniciaremos nossa lógica propriamente dita. Como necessitamos da leitura de um botão no nosso projeto devemos tratar o pino correspondente a esse botão como *input*, juntamente disso escolhemos o pino que usaremos para esse botão. Nesse caso, iremos escolher o pino D2. 
 Além da nossa configuração necessária para o projeto, devemos adicionar mais algumas coisas como a configuração do Arduino Nano IO e a inicialização do Modem Sigfox WISOL. Além disso, no código fornecido configuramos algumas mensagens para serem mostradas no monitor serial, essa parte é totalmente opcional e o código funciona sem ela.
