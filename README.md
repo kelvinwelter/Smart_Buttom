@@ -23,17 +23,17 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 ## Segundo passo: Programação do firmware para o projeto
   Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código fonte está disponibilizado para download aqui e também está disponível a seguir.
   ```
-  /**
-  **************************************************************************************************
-  * @file    NANOFOX_Activate_v0.ino
-  * @author  Edson Jeske e Kelvin Welter / Gridya Tecnologia
-  * @brief   Smart Buttom usando Nanofox IoT.
-  * 
-  *     - Envia um sinal através da rede Sigfox quando pressionado um botão por 2 segundos
-	*						
-  * License: Public Domain
-  **************************************************************************************************
-  */
+/**
+**************************************************************************************************
+* @file    smart_buttom.ino
+* @author  Edson Jeske e Kelvin Welter / Gridya Tecnologia
+* @brief   Smart Buttom usando Nanofox IoT.
+* 
+*     - Envia um sinal através da rede Sigfox quando pressionado um botão por 2 segundos
+  *            
+* License: Public Domain
+**************************************************************************************************
+*/
 
 
 /*-----HEADER FILES--------------------------------------------------------------------------------*/
@@ -43,45 +43,41 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 uint16_t Counter_Sig = 0;        //Counter for testing 
 unsigned long timeref_ms;        //Reference time for delay calculations
 
-uint8_t Uplink_Buffer[12];		//Buffer for uplink Payload
-uint8_t Downlink_Buffer[8];		//Buffer for Downlink Payload
+uint8_t Uplink_Buffer[12];    //Buffer for uplink Payload
+uint8_t Downlink_Buffer[8];   //Buffer for Downlink Payload
 
 
 /*------Objects -----------------------------------------------------------------------------------*/
-Nanofox MyNanofox;		//Nanofox Object Instance
+Nanofox MyNanofox;    //Nanofox Object Instance
 
 void setup() {
 
-  Serial.begin(9600);   //Initi Debug serial port
-  
-  MyNanofox.Init_ArduinoNano_IO(); 	//Setup arduino Nano IO
-  MyNanofox.Init_Modem_WISOL(RC2);  //Initialize WISOL Sigfox Modem
-  Serial.println("Welcome to NANOFOX IoT Kit!");
-  Serial.println("Welcome to NANOFOX IoT Kit!");
-  Serial.println("Smartbuttom com Nanofox IoT");
-  Serial.println("Pressione o botão por 2 segundos para ativar");
-  
-  timeref_ms = millis();	// Init time reference 
+Serial.begin(9600);   //Initi Debug serial port
+
+MyNanofox.Init_ArduinoNano_IO();  //Setup arduino Nano IO
+MyNanofox.Init_Modem_WISOL(RC2);  //Initialize WISOL Sigfox Modem
+Serial.println("Welcome to NANOFOX IoT Kit!");
+Serial.println("Welcome to NANOFOX IoT Kit!");
+Serial.println("Smartbuttom com Nanofox IoT");
+Serial.println("Pressione o botão por 2 segundos para ativar");
+
+timeref_ms = millis();  // Init time reference 
 }
 
 void loop() {
+
+  delay(10);
   
-	delay(10);
-	
-	if((millis() - timeref_ms) > 20000) //Prints PAC and Device ID every 20s
-	{ 
-		timeref_ms = millis(); //restart time reference
+  while(digitalRead(Buttom) == 0){
     
-		MyNanofox.Print_PAC_WISOL();
-		MyNanofox.Print_DEVICE_ID_WISOL();
-	}
-  
-	if(digitalRead(Buttom) == 0) //Send Sigfox msg when button pressed
-	{
-		Serial.println("Button pressed!");
-		
-		MyNanofox.Send_Payload_Sigfox(&Uplink_Buffer[0],2,&Downlink_Buffer[0],0);
-	} 
+    Serial.println("Button pressed!");
+    delay(2000);
+
+    if(digitalRead(Buttom) == 0){
+      MyNanofox.Send_Payload_Sigfox(&Uplink_Buffer[0],2,&Downlink_Buffer[0],0);
+    }
+    else{}
+  }
 }
   ```
   Seguem algumas breves explicações sobre o código.
