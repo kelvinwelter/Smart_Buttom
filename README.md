@@ -16,7 +16,7 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 ## Primeiro passo: Implementação do hardware
   Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
   
-  [![1543442720432.png](https://i.postimg.cc/gjj6pxrk/1543442720432.png)](https://postimg.cc/T58PqYrZ)
+  [![1543442720432.png](https://i.postimg.cc/gjj6pxrk/1543442720432.png)](https://postimg.cc/T58PqYrZ "Esquemático Smart Buttom")
   
   A montagem é simples e pode ser feita rapidamente. Feita a montagem, pode-se ir para a próxima etapa: a programação.
   
@@ -85,7 +85,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   Com o código já escrito e funcionando na placa Nanofox IoT e juntamente do hardware já pronto também, será possível mandar mensagens para o Backend Sigfox já. As mensagens deverão chegar de forma parecida com a imagem, se tudo ocorrer da melhor maneira, podemos ir para o próximo passo.
   
-  [![backend.png](https://i.postimg.cc/tT2X9DVF/backend.png)](https://postimg.cc/JDHwqNxh)
+  [![backend.png](https://i.postimg.cc/tT2X9DVF/backend.png)](https://postimg.cc/JDHwqNxh "Backend Sigfox com sinal recebido")
   
 ## Terceiro passo: Integração da plataforma Tago com o Backend Sigfox
   Essa etapa é muito bem relatada e explicada a partir de um [tutorial escrito pela própria Tago](https://tago.elevio.help/en/articles/33). Nesse tutorial está relatado tanto a parte feita na plataforma Tago quanto a criação de Callbacks no Backend Sigfox para essa integração, tudo muito bem detalhado, vale a pena conferir.
@@ -94,11 +94,11 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
 ## Quarto passo: Configuração para envio de e-mail via plataforma Tago
   Após concluída a integração da plataforma Tago com o backend Sigfox e antes de começarmos o código no Arduino IDE, temos mais um passo necessário na plataforma Tago: configurarmos a plataforma para enviar um e-mail de emergência. Para começarmos, acessaremos a opção **Action** no menu lateral da página de desenvolvedor na Tago. Após entrarmos em **Action**, clicamos no botão **Add Action** no canto superior direito. Assim, entramos em uma nova ação a ser criada. Na aba **General Information** damos um nome a nossa ação, escolhemos a ação a ser tomada (**Send Email**) e preenchemos com o destinatário, título e conteúdo do email. A configuração nessa aba deve ficar assim:
   
-  [![general-information.png](https://i.postimg.cc/kXxqs3F1/general-information.png)](https://postimg.cc/3dJsrqqm)
+  [![general-information.png](https://i.postimg.cc/kXxqs3F1/general-information.png)](https://postimg.cc/3dJsrqqm "Configuração da aba General Information")
   
   A seguir, precisamos ir para a aba **Trigger**, nessa aba iremos configurar quando a plataforma Tago deve enviar o e-mail. Queremos que ela envie sempre que um sinal Sigfox chegue na plataforma, portanto, devemos configurar a condição de acionamento da ação como **Any** e também devemos escolher uma variável que será monitorado para a condição de acionamento, no caso, escolheremos a variável **data**. Além disso, devemos **desativar a opção Lock trigger after action is taken**. Feito isso, a configuração deve ficar da seguinte maneira:
   
-  [![trigger.png](https://i.postimg.cc/yYBvc37G/trigger.png)](https://postimg.cc/dDH2K1kR)
+  [![trigger.png](https://i.postimg.cc/yYBvc37G/trigger.png)](https://postimg.cc/dDH2K1kR "Configuração da aba Trigger")
   
   Após isso, nossa ação já está pronta para ser salva e usada!
   
