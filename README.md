@@ -83,6 +83,10 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   #### Função Loop: 
   Temos agora a parte principal do código. Nosso loop trabalha da seguinte forma: o botão é constantemente lido, se caso o valor lido no botão saía de 1 e vá para 0, ou seja, o botão for apertado. Nosso código entra no while e confere a leitura do botão 2 segundos depois através do delay. Se o botão continua apertado, então é enviado um sinal para a rede Sigfox através de funções da biblioteca Nanofox. Caso o botão não continue apertado após esses dois segundos, o código trata tal fato como se fosse um aperto acidental e não toma nenhuma atitude além de enviar uma mensagem no monitor serial. 
   
+  Com o código já escrito e funcionando na placa Nanofox IoT e juntamente do hardware já pronto também, será possível mandar mensagens para o Backend Sigfox já. As mensagens deverão chegar de forma parecida com a imagem, se tudo ocorrer da melhor maneira, podemos ir para o próximo passo.
+  
+  [![backend.png](https://i.postimg.cc/tT2X9DVF/backend.png)](https://postimg.cc/JDHwqNxh)
+  
 ## Terceiro passo: Integração da plataforma Tago com o Backend Sigfox
   Essa etapa é muito bem relatada e explicada a partir de um [tutorial escrito pela própria Tago](https://tago.elevio.help/en/articles/33). Nesse tutorial está relatado tanto a parte feita na plataforma Tago quanto a criação de Callbacks no Backend Sigfox para essa integração, tudo muito bem detalhado, vale a pena conferir.
   Após a conclusão de toda integração, podemos seguir para a última etapa.
