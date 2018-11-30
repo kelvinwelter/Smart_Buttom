@@ -35,14 +35,17 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 **************************************************************************************************
 */
 
+
 /*-----HEADER FILES--------------------------------------------------------------------------------*/
 #include <Nanofox.h>   //Nanofox Library
 
 /*------Global Variables---------------------------------------------------------------------------*/
 uint16_t Counter_Sig = 0;        //Contador para testes
 unsigned long timeref_ms;        //Referência de tempo para cálculos de atraso
+
 uint8_t Uplink_Buffer[12];    //Buffer para o uplink do Payload
 uint8_t Downlink_Buffer[8];   //Buffer para o Downlink do Payload
+
 
 /*------Objects -----------------------------------------------------------------------------------*/
 Nanofox MyNanofox;    //Nanofox Object Instance
@@ -56,18 +59,23 @@ MyNanofox.Init_Modem_WISOL(RC2);  //Inicialização do WISOL Sigfox Modem
 Serial.println("Welcome to NANOFOX IoT Kit!");
 Serial.println("Smartbuttom com Nanofox IoT");
 Serial.println("Pressione o botão por 2 segundos para ativar");
-pinMode(2, INPUT_PULLUP); //Definindo o pino D2 como input com pullup interno
+pinMode(5, INPUT_PULLUP); //Definindo o pino D2 como input com pullup interno
 
 timeref_ms = millis();  // Inicialização da referência de tempo
 }
 
 void loop() {
-  delay(10);
-  while(digitalRead(2) == LOW){ //Leitura do pino D2 e estrutura de repetição while para caso o botão seja pressionado
-    
-    delay(2000); //Aguardo de 2 segundos para conferir novamente se o botão está pressionado
 
-    if(digitalRead(2) == LOW){ //Se o botão estiver pressionado após os dois segundos, a placa Nanofox IoT transmite sinal 
+  delay(10);
+
+  Serial.println(digitalRead(5));
+  delay(3000);
+  
+  while(digitalRead(5) == LOW){ //Leitura do pino D2 e estrutura de repetição while para caso o botão seja pressionado
+    
+  delay(2000); //Aguardo de 2 segundos para conferir novamente se o botão está pressionado
+
+    if(digitalRead(5) == LOW){ //Se o botão estiver pressionado após os dois segundos, a placa Nanofox IoT transmite sinal 
       Serial.println("Botão pressionado");  
       MyNanofox.Send_Payload_Sigfox(&Uplink_Buffer[0],2,&Downlink_Buffer[0],0);
     }
