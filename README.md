@@ -100,7 +100,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   A seguir, precisamos ir para a aba **Trigger**, nessa aba iremos configurar quando a plataforma Tago deve enviar o e-mail. Queremos que ela envie sempre que um sinal Sigfox chegue na plataforma, portanto, devemos configurar a condição de acionamento da ação como **Any** e também devemos escolher uma variável que será monitorado para a condição de acionamento, no caso, escolheremos a variável **data**. Além disso, devemos **desativar a opção Lock trigger after action is taken**. Feito isso, a configuração deve ficar da seguinte maneira:
   
-  [![trigger.png](https://i.postimg.cc/XY01jJXn/trigger.png)](https://postimg.cc/CzmsJwj2)
+  [![trigger.png](https://i.postimg.cc/yYBvc37G/trigger.png)](https://postimg.cc/dDH2K1kR)
   
   Após isso, nossa ação já está pronta para ser salva e usada!
   
