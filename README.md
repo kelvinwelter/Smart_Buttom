@@ -16,7 +16,7 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
 ## Primeiro passo: Implementação do hardware
   Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
   
-  [![1543442720432.png](https://i.postimg.cc/gjj6pxrk/1543442720432.png)](https://postimg.cc/T58PqYrZ "Esquemático Smart Buttom")
+  [![schematic-v2-smartbuttom.png](https://i.postimg.cc/VvgvnBPj/schematic-v2-smartbuttom.png)](https://postimg.cc/FkfhQSRR "Esquemático Smart Buttom")
   
   A montagem é simples e pode ser feita rapidamente. Feita a montagem, pode-se ir para a próxima etapa: a programação.
   
