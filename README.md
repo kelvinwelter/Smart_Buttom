@@ -75,7 +75,7 @@ void loop() {
   delay(2000); //Aguardo de 2 segundos para conferir novamente se o botão está pressionado
 
     if(digitalRead(2) == LOW){ //Se o botão estiver pressionado após os dois segundos, a placa Nanofox IoT transmite sinal 
-      Serial.println("Botão pressionado");  
+      Serial.println("Botão pressionado! Envio de mensagem para rede Sigfox iniciado.");  
       MyNanofox.Send_Payload_Sigfox(&Uplink_Buffer[0],1,&Downlink_Buffer[0],0);
     }
   }
