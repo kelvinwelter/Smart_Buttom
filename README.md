@@ -96,7 +96,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   Com o código já escrito e funcionando na placa Nanofox IoT e juntamente do hardware já pronto também, será possível mandar mensagens para o Backend Sigfox já. As mensagens deverão chegar de forma parecida com a imagem, se tudo ocorrer da melhor maneira, podemos ir para o próximo passo.
   
-  [![backend.png](https://i.postimg.cc/tT2X9DVF/backend.png)](https://postimg.cc/JDHwqNxh "Backend Sigfox com sinal recebido")
+  [![backend-message.png](https://i.postimg.cc/q7kZ3sTG/backend-message.png)](https://postimg.cc/Xrz8MyXZ "Backend Sigfox com sinal recebido")
   
 ## Terceiro passo: Integração da plataforma Tago com o Backend Sigfox
   Essa etapa é muito bem relatada e explicada a partir de um [tutorial escrito pela própria Tago](https://tago.elevio.help/en/articles/33). Nesse tutorial está relatado tanto a parte feita na plataforma Tago quanto a criação de Callbacks no Backend Sigfox para essa integração, tudo muito bem detalhado, vale a pena conferir.
