@@ -72,7 +72,7 @@ void loop() {
   
   while(digitalRead(2) == LOW){ //Leitura do pino D2 e estrutura de repetição while para caso o botão seja pressionado
     
-  delay(2000); //Aguardo de 2 segundos para conferir novamente se o botão está pressionado
+    delay(2000); //Aguardo de 2 segundos para conferir novamente se o botão está pressionado
 
     if(digitalRead(2) == LOW){ //Se o botão estiver pressionado após os dois segundos, a placa Nanofox IoT transmite sinal 
       Serial.println("Botão pressionado! Envio de mensagem para rede Sigfox iniciado.");  
