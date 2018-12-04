@@ -107,6 +107,10 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   [![trigger.png](https://i.postimg.cc/YCT6rzwG/trigger.png)](https://postimg.cc/XrcGxFq4 "Configuração da aba Trigger")
   
-  Após isso, nossa ação já está pronta para ser salva e usada!
+  Após isso, nossa ação já está pronta para ser salva e usada! Tente você mesmo, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
+  
+  [![email-recebido.png](https://i.postimg.cc/tR3Nt0mX/email-recebido.png)](https://postimg.cc/4n3cs0gM "Email recebido!")
+  
+  Agora você está pronto para ir muito além no mundo IoT, sua primeira aplicação usando a placa Nanofox IoT já foi feita! Liberte sua imaginação e mão na massa! Os seus projetos poderão ser cada vez mais interessantes e complexos, projete sem medo! A Nanofox IoT dá conta ;)  [![100.png](https://i.postimg.cc/W1FnZdBy/100.png)](https://postimg.cc/G4RGwmhP "Gridya")
   
 
