@@ -113,7 +113,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   Após isso, nossa ação já está pronta para ser salva e usada! Antes de testarmos a nossa ação é importante lembrar que existem muitos mais recursos na plataforma Tago, explore um pouco a aba **Dashboard**, nessa aba podemos utilizar as mais diversas formas para visualização de nossos dados, um exemplo é a criação de uma tabela com a ID do nosso dispositivo, data e o horário que os emails foram enviados:
   
-  [![tabela-emails.png](https://i.postimg.cc/PrjJYJCq/tabela-emails.png)]("Tabela")
+  [![tabela-emails.png](https://i.postimg.cc/6QJ4jc3d/tabela-emails.png)](https://postimg.cc/4YP3nzpd "Tabela com ID, data e horário")
   
   Vamos agora testar a nossa action que acabamos de criar, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
   
