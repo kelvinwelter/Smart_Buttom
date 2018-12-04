@@ -20,7 +20,7 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
   
   A montagem é simples e pode ser feita rapidamente. Em nosso projeto, optamos por realizar a alimentação via USB e usar o botão externo, dessa forma, a nossa placa Nanofox IoT juntamente do botão externo ficou da seguinte forma:
   
-  [![IMG-20181204-213812.jpg](https://i.postimg.cc/wjSjxBYH/IMG-20181204-213812.jpg)]("Placa Nanofox montada com antena e botão externo" )
+  [![IMG-20181204-213812.jpg](https://i.postimg.cc/wjSjxBYH/IMG-20181204-213812.jpg)](https://postimg.cc/4YQgBs3F "Placa Nanofox IoT montada com antena e botão externo")
   
   Feita a montagem de forma correta e da maneira que o leitor preferiu, pode-se ir para a próxima etapa: a programação.
   
