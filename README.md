@@ -14,11 +14,15 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
   O nosso projeto será dividido em 4 etapas principais, além de etapas que não fazem parte do projeto em si mas que são necessárias para a execução de tal.
   
 ## Primeiro passo: Implementação do hardware
-  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão. Faremos isso a partir do uso de um botão conectado no pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
+  Na nossa primeira etapa do projeto, iremos realizar a integração da placa Nanofox IoT com o botão (pode-se usar o botão que já vem montado na placa também, a escolha fica por conta do leitor). Faremos isso a partir do uso de um botão conectado no pino D2. O projeto será alimentado via USB mas pode ser alimentado por bateria também. Na imagem abaixo o esquemático está descrito junto da bateria, caso queira deixar seu projeto mais portátil, basta seguir o esquemático.
   
   [![schematic-v2-smartbuttom.png](https://i.postimg.cc/VvgvnBPj/schematic-v2-smartbuttom.png)](https://postimg.cc/FkfhQSRR "Esquemático Smart Buttom")
   
-  A montagem é simples e pode ser feita rapidamente. Feita a montagem, pode-se ir para a próxima etapa: a programação.
+  A montagem é simples e pode ser feita rapidamente. Em nosso projeto, optamos por realizar a alimentação via USB e usar o botão externo, dessa forma, a nossa placa Nanofox IoT juntamente do botão externo ficou da seguinte forma:
+  
+  
+  
+  Feita a montagem de forma correta e da maneira que o leitor preferiu, pode-se ir para a próxima etapa: a programação.
   
 ## Segundo passo: Programação do firmware para o projeto
   Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código fonte está disponibilizado para download aqui e também está disponível a seguir.
@@ -107,7 +111,11 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   [![trigger.png](https://i.postimg.cc/YCT6rzwG/trigger.png)](https://postimg.cc/XrcGxFq4 "Configuração da aba Trigger")
   
-  Após isso, nossa ação já está pronta para ser salva e usada! Tente você mesmo, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
+  Após isso, nossa ação já está pronta para ser salva e usada! Antes de testarmos a nossa ação é importante lembrar que existem muitos mais recursos na plataforma Tago, explore um pouco a aba **Dashboard**, nessa aba podemos utilizar as mais diversas formas para visualização de nossos dados, um exemplo é a criação de uma tabela com a data e o horário que os emails foram enviados:
+  
+  
+  
+  Tente você mesmo, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
   
   [![email-recebido.png](https://i.postimg.cc/tR3Nt0mX/email-recebido.png)](https://postimg.cc/4n3cs0gM "Email recebido!")
   
