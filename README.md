@@ -22,7 +22,7 @@ Essa página apresenta um passo a passo do procedimento necessário para realiza
   
 ## Segundo passo: Programação do firmware para o projeto
   Em nossa segunda etapa trabalharemos com programação dentro do Arduino IDE. O código fonte está disponibilizado para download aqui e também está disponível a seguir.
-  ```
+  ```c++
 /**
 **************************************************************************************************
 * @file    smart_buttom.ino
