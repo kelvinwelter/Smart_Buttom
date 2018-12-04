@@ -115,7 +115,7 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   [![tabela-emails.png](https://i.postimg.cc/PrjJYJCq/tabela-emails.png)]("Tabela")
   
-  Tente você mesmo, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
+  Vamos agora testar a nossa action que acabamos de criar, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
   
   [![email-recebido.png](https://i.postimg.cc/tR3Nt0mX/email-recebido.png)](https://postimg.cc/4n3cs0gM "Email recebido!")
   
