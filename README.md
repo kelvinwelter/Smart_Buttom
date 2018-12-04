@@ -111,9 +111,9 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   [![trigger.png](https://i.postimg.cc/YCT6rzwG/trigger.png)](https://postimg.cc/XrcGxFq4 "Configuração da aba Trigger")
   
-  Após isso, nossa ação já está pronta para ser salva e usada! Antes de testarmos a nossa ação é importante lembrar que existem muitos mais recursos na plataforma Tago, explore um pouco a aba **Dashboard**, nessa aba podemos utilizar as mais diversas formas para visualização de nossos dados, um exemplo é a criação de uma tabela com a data e o horário que os emails foram enviados:
+  Após isso, nossa ação já está pronta para ser salva e usada! Antes de testarmos a nossa ação é importante lembrar que existem muitos mais recursos na plataforma Tago, explore um pouco a aba **Dashboard**, nessa aba podemos utilizar as mais diversas formas para visualização de nossos dados, um exemplo é a criação de uma tabela com a ID do nosso dispositivo, data e o horário que os emails foram enviados:
   
-  
+  [![tabela-emails.png](https://i.postimg.cc/PrjJYJCq/tabela-emails.png)]("Tabela")
   
   Tente você mesmo, caso você executar a ação necessária para envio de dados para a rede Sigfox, você deverá então receber, em poucos segundos, um email conforme você configurou na plataforma Tago. A imagem exemplifica isso:
   
