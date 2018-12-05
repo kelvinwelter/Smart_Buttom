@@ -119,9 +119,8 @@ Além da nossa configuração necessária para o projeto, devemos adicionar mais
   
   [![email-recebido.png](https://i.postimg.cc/tR3Nt0mX/email-recebido.png)](https://postimg.cc/4n3cs0gM "Email recebido!")
   
+  Pode-se mostrar também um exemplo usando uma tabela na aba Dashboard da plataforma Tago. Montando uma tabela dinâmica que contenha todas as datas e horários em que foi enviado um email. O exemplo abaixo demostra isso:
+  
+  ![Gif_Smart_Buttom](https://media.giphy.com/media/kFezlCCsnJ4OiMOgvR/giphy.gif)
+  
   Agora você está pronto para ir muito além no mundo IoT, sua primeira aplicação usando a placa Nanofox IoT já foi feita! Liberte sua imaginação e mão na massa! Os seus projetos poderão ser cada vez mais interessantes e complexos, projete sem medo! A Nanofox IoT dá conta ;)  [![100.png](https://i.postimg.cc/W1FnZdBy/100.png)](https://www.gridya.com.br/ "Gridya")
-  
-  ![](https://media.giphy.com/media/5WiisZktG2T1T67vCc/giphy.gif)
-
-  
-
